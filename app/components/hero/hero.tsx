@@ -2,7 +2,7 @@
 
 import classNames from "classnames";
 import Link from "next/link";
-import { merryWeather } from "../../fonts";
+import { merryWeather, mukta } from "../../fonts";
 import { AtSignIcon } from "../layouts/icons/at-sign-icon";
 import { GithubIcon } from "../layouts/icons/github-icon";
 import { LinkedinIcon } from "../layouts/icons/linkedin-icon";
@@ -14,6 +14,7 @@ import StatItem from "../stat-item";
 import AnimatedNumber from "../animated-number";
 import { useEffect, useState } from "react";
 import { getAllTimeCoding, hoursToMinutes } from "app/utils/getAllTimeCoding";
+import { m } from "motion/dist/react";
 
 export default function Hero() {
   const START_DATE = new Date("2023-01-01");
@@ -48,6 +49,7 @@ export default function Hero() {
 
       <div className={classNames("relative min-h-svh", merryWeather.className)}>
         <ArrowDown />
+
         <div className="absolute top-[20%] md:top-[40%] max-w-5xl flex-col space-y-4 justify-center px-8 md:px-24 lg:ml-14">
           <h1 className="text-2xl font-medium md:mr-4 md:text-4xl">
             Welcome to my{" "}
@@ -56,12 +58,11 @@ export default function Hero() {
             <span className="italic border-b">playground</span> on the web.
           </h1>
           <section className="relative z-10">
-            <p className="text-base text-justify">
+            <p className="text-base md:text-md lg:text-lg text-justify">
               I&apos;m Dale Larroder — a Software Engineer and forever a student
               of the craft. I love building things for the web and am always on
-              the lookout for new challenges and opportunities to learn.
-              I&apos;m passionate about creating beautiful and functional user
-              experiences. Right now, I&apos;m building cool things at{" "}
+              the lookout for new challenges and opportunities to learn. Right
+              now, I&apos;m building cool things at{" "}
               <a
                 href="https://www.aphex.co/"
                 className="underline-magical"
@@ -74,10 +75,14 @@ export default function Hero() {
               .
             </p>
           </section>
-          <h2 className="text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 mb-1">
+          <h2
+            className={`text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 mb-1 ${mukta.className}`}
+          >
             Wakatime
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+          <div
+            className={`flex flex-wrap gap-4 max-w-5xl text-base md:text-md lg:text-lg ${mukta.className}`}
+          >
             <StatItem title="All Time">
               <AnimatedNumber number={allTime.hours} /> hours{" "}
               <AnimatedNumber number={allTime.minutes} /> minutes
@@ -86,7 +91,6 @@ export default function Hero() {
             <StatItem title="Daily Average">
               <AnimatedNumber number={DAILY_HOURS} /> hours /{" "}
               <AnimatedNumber number={hoursToMinutes(DAILY_HOURS)} /> minutes
-              
             </StatItem>
 
             <StatItem title="Weekly Average">
