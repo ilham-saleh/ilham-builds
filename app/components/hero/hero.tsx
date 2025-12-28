@@ -34,54 +34,52 @@ export default function Hero() {
   const DAILY_HOURS = 4;
   const WEEKLY_HOURS = 28;
 
-  // Fixed daily and weekly totals in minutes
-  const dailyMinutes = 3 * 60 + 30; // 3 hours 30 minutes
-  const weeklyMinutes = 20 * 60 + 30; // example 20 hours 30 minutes
-
   return (
-    <main className="relative min-h-svh w-screen overflow-hidden">
+    <main className="relative z-10 min-h-svh w-screen overflow-hidden">
       <SplashCursor
-        // containerClassName="min-h-svh w-screen"
-        // usePrimaryColors={true}
-        containerClassName="absolute inset-0 pointer-events-none"
-        usePrimaryColors
+        // containerClassName="absolute inset-0 pointer-events-none"
+        usePrimaryColors={true}
       />
-
-      <div className={classNames("relative min-h-svh", merryWeather.className)}>
+      <div
+        className={classNames(
+          "relative min-h-svh flex items-center",
+          merryWeather.className
+        )}
+      >
         <ArrowDown />
 
-        <div className="absolute top-[20%] md:top-[40%] max-w-5xl flex-col space-y-4 justify-center px-8 md:px-24 lg:ml-14">
-          <h1 className="text-2xl font-medium md:mr-4 md:text-4xl">
+        <div className="w-full max-w-5xl px-6 sm:px-10 md:px-16 lg:px-24 lg:ml-14">
+          <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium mb-3">
             Welcome to my{" "}
-            <span className="font-bold">personal portfolio — </span> or, as I
-            like to call it, my{" "}
-            <span className="italic border-b">playground</span> on the web.
+            <span className="font-bold">personal portfolio — </span> It reflects
+            how I <span className="italic border-b">think</span> and{" "}
+            <span className="italic border-b">build</span>.{" "}
           </h1>
-          <section className="relative z-10">
-            <p className="text-base md:text-md lg:text-lg text-justify">
-              I&apos;m Dale Larroder — a Software Engineer and forever a student
-              of the craft. I love building things for the web and am always on
-              the lookout for new challenges and opportunities to learn. Right
-              now, I&apos;m building cool things at{" "}
+          <section className="relative z-10 mb-2">
+            <p className="text-sm sm:text-base lg:text-lg leading-relaxed max-w-prose">
+              I&apos;m Ilham — a Software Developer and forever a student of the
+              craft. I love building things for the web and am always on the
+              lookout for new challenges and opportunities to learn. Right now,
+              I&apos;m building cool things at{" "}
               <a
-                href="https://www.aphex.co/"
+                href="https://www.connectlife.uk/"
                 className="underline-magical"
                 target="_blank"
                 rel="noreferrer"
                 data-skip-splash-cursor
               >
-                Aphex
+                ConnectLife
               </a>
               .
             </p>
           </section>
           <h2
-            className={`text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 mb-1 ${mukta.className}`}
+            className={`text-xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 ${mukta.className}`}
           >
             Wakatime
           </h2>
           <div
-            className={`flex flex-wrap gap-4 max-w-5xl text-base md:text-md lg:text-lg ${mukta.className}`}
+            className={`flex flex-wrap gap-4 max-w-5xl text-base md:text-md lg:text-lg mb-4 ${mukta.className}`}
           >
             <StatItem title="All Time">
               <AnimatedNumber number={allTime.hours} /> hours{" "}
@@ -98,12 +96,12 @@ export default function Hero() {
               <AnimatedNumber number={hoursToMinutes(WEEKLY_HOURS)} /> minutes
             </StatItem>
           </div>
-          <section className="relative z-10 flex space-x-4 items-center text-sm">
+          <section className="relative z-10 flex flex-col sm:flex-row gap-4 sm:items-center text-sm">
             <div>
               <p>More about me: </p>
               <div className="flex -ml-2">
                 <Link
-                  href="https://www.linkedin.com/in/dale-larroder/"
+                  href="https://www.linkedin.com/in/ilham-saleh-430289218/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="linkedin"
@@ -112,7 +110,7 @@ export default function Hero() {
                   <LinkedinIcon className="h-9 w-9" />
                 </Link>
                 <Link
-                  href="https://github.com/dlarroder"
+                  href="https://github.com/ilham-saleh"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="github"
@@ -121,7 +119,7 @@ export default function Hero() {
                   <GithubIcon className="h-9 w-9" />
                 </Link>
                 <Link
-                  href="https://x.com/dalelarroder"
+                  href="https://x.com/"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="twitter"
@@ -130,7 +128,7 @@ export default function Hero() {
                   <XIcon className="h-9 w-9" />
                 </Link>
                 <Link
-                  href="mailto:hi@dalelarroder.com"
+                  href="mailto:ilham2saleh@gmail.com"
                   aria-label="email"
                   rel="noreferrer"
                   data-skip-splash-cursor
@@ -139,7 +137,7 @@ export default function Hero() {
                 </Link>
               </div>
             </div>
-            <div className="h-14 border-l border-gray-300" />
+            <div className="hidden sm:block h-14 border-l border-gray-300" />
             <div
               className="flex flex-wrap space-x-3 space-y-1"
               data-skip-splash-cursor
@@ -152,6 +150,7 @@ export default function Hero() {
           </section>
         </div>
       </div>
+      {/* </SplashCursor> */}
     </main>
   );
 }

@@ -34,6 +34,12 @@ const SplashCursor: React.FC<SplashCursorProps> = ({
     const container = containerRef.current;
     if (!canvas || !container) return;
 
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion) return;
+
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
