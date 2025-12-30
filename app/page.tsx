@@ -1,6 +1,7 @@
-import Contact from "./components/contact";
+// import Contact from "./components/contact";
 import Hero from "./components/hero/hero";
 import Intro from "./components/intro";
+import ClipPathLinks from "./components/mega-ui/links/ClipPathLinks";
 import { ScrollProvider } from "./components/providers/ScrollProvider";
 import ScrollProgressBar from "./components/scroll-progress-bar";
 import Works from "./components/work/works";
@@ -12,7 +13,7 @@ export default function Home() {
       <Hero />
       <Intro />
       <Works />
-      <Contact />
+      <ClipPathLinks />
     </ScrollProvider>
   );
 }
