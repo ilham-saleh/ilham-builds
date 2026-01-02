@@ -23,7 +23,7 @@ cd ilham-builds
 3. Install dependencies
 
 ```bash
-bun install
+npm install
 ```
 
 1. Create a `.env.local` file following the `.env.example`
@@ -44,9 +44,9 @@ SPOTIFY_CLIENT_ID=<Your env>
 6. Run the development server
 
 ```bash
-bun run dev
+npm run dev
 ```
 
 ## Licence
 
-[MIT](https://github.com/dlarroder/dalelarroder/blob/master/LICENSE) © [Dale Larroder](https://www.dalelarroder.com)
+[MIT](https://github.com/ilham-saleh/ilham-builds?tab=MIT-1-ov-file#MIT-1-ov-file) © [Ilham Saleh](https://fabulous-monstera-cb8660.netlify.app/)
