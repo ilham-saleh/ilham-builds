@@ -1,70 +1,8 @@
-// REFACTORED VERSION USING LENIS FOR SMOOTH SCROLL-BASED OPACITY ANIMATION
-
-// "use client";
-
-// import { useEffect, useRef } from "react";
-
-// export default function Intro() {
-//   const containerRef = useRef<HTMLDivElement>(null);
-
-//   useEffect(() => {
-//     const container = containerRef.current;
-//     if (!container) return;
-
-//     const blocks = Array.from(
-//       container.querySelectorAll<HTMLElement>(".intro-text")
-//     );
-
-//     const observer = new IntersectionObserver(
-//       (entries) => {
-//         entries.forEach((entry) => {
-//           if (entry.isIntersecting) {
-//             entry.target.classList.add("is-active");
-//           } else {
-//             entry.target.classList.remove("is-active");
-//           }
-//         });
-//       },
-//       {
-//         root: null,
-//         threshold: 0.6,
-//       }
-//     );
-
-//     blocks.forEach((block) => observer.observe(block));
-
-//     return () => observer.disconnect();
-//   }, []);
-
-//   return (
-//     <section
-//       ref={containerRef}
-//       id="intro"
-//       className="relative z-10 bg-black text-white dark:bg-white dark:text-black"
-//     >
-//       <div className="mx-auto flex min-h-screen max-w-5xl flex-col items-center justify-center px-10 py-24 text-4xl font-semibold tracking-tight md:py-28 md:text-6xl lg:px-20 lg:py-3 lg:text-7xl">
-//         <div className="leading-[1.15] space-y-6">
-//           <p className="intro-text">I love coding.</p>
-
-//           <p className="intro-text">
-//             I use my passion and skills to build digital products and
-//             experiences.
-//           </p>
-
-//           <p className="intro-text">
-//             I&apos;m passionate about pixel-perfect UI and intuitively
-//             implemented UX.
-//           </p>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import { useLenis } from "lenis/dist/lenis-react";
 import { useRef, useState } from "react";
+import { ImageTrail } from "./mega-ui/mouse-image-trail/ImageTrail";
 
 function opacityForBlock(sectionProgress: number, blockNumber: number) {
   const progress = sectionProgress - blockNumber;
@@ -108,6 +46,7 @@ export default function Intro() {
       className="relative z-10 bg-black text-white dark:bg-white  dark:text-black"
       id="intro"
     >
+      {/* <ImageTrail> */}
       <div className="mx-auto flex min-h-screen max-w-5xl flex-col items-center justify-center px-10 py-24 text-4xl font-semibold tracking-tight md:py-28 md:text-6xl lg:px-20 lg:py-3 lg:text-7xl">
         <div className="leading-[1.15]">
           <div
@@ -120,18 +59,17 @@ export default function Intro() {
             className="intro-text inline-block after:content-['_']"
             style={{ opacity: opacityForBlock(progress, 1) }}
           >
-            I use my passion and skills to build digital products and
-            experiences.
+            I use it to build thoughtful digital products.
           </span>
           <span
             className="intro-text inline-block"
             style={{ opacity: opacityForBlock(progress, 2) }}
           >
-            I&apos;m passionate about cutting-edge, pixel perfect UI and
-            intuitively implemented UX.
+            I care about pixel-precise UI and UX that feels natural, not forced.
           </span>
         </div>
       </div>
+      {/* </ImageTrail> */}
     </div>
   );
 }

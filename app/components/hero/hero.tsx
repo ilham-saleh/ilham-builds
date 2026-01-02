@@ -57,10 +57,9 @@ export default function Hero() {
           </h1>
           <section className="relative z-10 mb-2">
             <p className="text-sm sm:text-base lg:text-lg leading-relaxed max-w-prose">
-              I&apos;m Ilham — a Software Developer and forever a student of the
-              craft. I love building things for the web and am always on the
-              lookout for new challenges and opportunities to learn. Right now,
-              I&apos;m building cool things at{" "}
+              I&apos;m Ilham — a software developer who enjoys turning ideas
+              into simple, well-built web products. I care about clean code,
+              thoughtful UX, and learning how things really work under the hood.{" "}
               <a
                 href="https://www.connectlife.uk/"
                 className="underline-magical"
@@ -119,7 +118,7 @@ export default function Hero() {
                   <GithubIcon className="h-9 w-9" />
                 </Link>
                 <Link
-                  href="https://x.com/"
+                  href="https://x.com"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="twitter"
@@ -128,7 +127,7 @@ export default function Hero() {
                   <XIcon className="h-9 w-9" />
                 </Link>
                 <Link
-                  href="mailto:ilham2saleh@gmail.com"
+                  href="mailto:ilham2saleh@com"
                   aria-label="email"
                   rel="noreferrer"
                   data-skip-splash-cursor

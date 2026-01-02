@@ -1,17 +1,25 @@
 "use client";
 
-import React, { MouseEvent } from "react";
+import { MouseEvent } from "react";
 import {
   SiAdobe,
   SiApple,
+  SiCalendly,
   SiFacebook,
+  SiGithub,
+  SiGmail,
   SiGoogle,
   SiLinkedin,
+  SiReaddotcv,
   SiShopify,
   SiSoundcloud,
   SiSpotify,
   SiTiktok,
+  SiX,
+  SiLeetcode,
 } from "react-icons/si";
+import { MdWork } from "react-icons/md";
+import { PiCertificateBold, PiReadCvLogoBold } from "react-icons/pi";
 import { useAnimate } from "framer-motion";
 import { IconType } from "react-icons";
 
@@ -34,6 +42,7 @@ export default function ClipPathLinks() {
     </section>
   );
 }
+const link = <img src="/static/images/aphex-apps.webp" alt="" />;
 
 /* ----------------------------- */
 /* Grid Layout                   */
@@ -44,21 +53,33 @@ const LinksGrid = () => {
     <div className="h-full p-2 sm:p-4 md:p-6 lg:p-8">
       <div className="h-full grid grid-rows-3 grid-rows-[1fr_1.2fr_1fr] border border-neutral-900 divide-y divide-neutral-900">
         <div className="grid grid-cols-2 divide-x divide-neutral-900">
-          <LinkBox Icon={SiGoogle} href="#" />
-          <LinkBox Icon={SiShopify} href="#" />
+          <LinkBox
+            Icon={SiLinkedin}
+            href="https://www.linkedin.com/in/ilham-saleh-430289218/"
+          />
+          <LinkBox Icon={SiGithub} href="https://github.com/ilham-saleh" />
         </div>
 
         <div className="grid grid-cols-4 divide-x divide-neutral-900">
-          <LinkBox Icon={SiApple} href="#" />
-          <LinkBox Icon={SiSoundcloud} href="#" />
-          <LinkBox Icon={SiAdobe} href="#" />
-          <LinkBox Icon={SiFacebook} href="#" />
+          <LinkBox Icon={SiGmail} href="mailto:ilham2saleh@gmail.com" />
+          <LinkBox Icon={PiReadCvLogoBold} href="/static/IlhamCV.pdf" />
+          <LinkBox
+            Icon={SiCalendly}
+            href="https://calendly.com/ilham2saleh/30min"
+          />
+          <LinkBox Icon={MdWork} href="http://localhost:3000/projects" />
         </div>
 
         <div className="grid grid-cols-3 divide-x divide-neutral-900">
-          <LinkBox Icon={SiTiktok} href="#" />
-          <LinkBox Icon={SiSpotify} href="#" />
-          <LinkBox Icon={SiLinkedin} href="#" />
+          <LinkBox
+            Icon={PiCertificateBold}
+            href="https://drive.google.com/file/d/1jYfezVpUHdgDvRwnAYTF-BOJmTvuQ6v1/view?usp=sharing"
+          />
+          <LinkBox Icon={SiX} href="https://x.com/" />
+          <LinkBox
+            Icon={SiLeetcode}
+            href="https://leetcode.com/u/ilham-saleh/"
+          />
         </div>
       </div>
     </div>
@@ -125,6 +146,7 @@ const LinkBox = ({ Icon, href }: { Icon: IconType; href: string }) => {
 
   return (
     <a
+      target="_blank"
       href={href}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
