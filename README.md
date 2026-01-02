@@ -26,22 +26,7 @@ cd ilham-builds
 npm install
 ```
 
-1. Create a `.env.local` file following the `.env.example`
-
-```bash
-cp .env.example .env.local
-```
-
-5. Add your environment variables to `.env.local`
-
-```txt
-SPOTIFY_REFRESH_TOKEN=<Your env>
-SPOTIFY_CLIENT_SECRET=<Your env>
-SPOTIFY_CLIENT_ID=<Your env>
-// ...
-```
-
-6. Run the development server
+4. Run the development server
 
 ```bash
 npm run dev
