@@ -7,7 +7,6 @@ import { AtSignIcon } from "../layouts/icons/at-sign-icon";
 import { GithubIcon } from "../layouts/icons/github-icon";
 import { LinkedinIcon } from "../layouts/icons/linkedin-icon";
 import { XIcon } from "../layouts/icons/x-icon";
-// import SplashCursor from "../mega-ui/cursor-effects/splash-cursor";
 import SplashCursor from "../splash-cursor";
 import ArrowDown from "./arrow-down";
 import StatItem from "../stat-item";
@@ -36,10 +35,7 @@ export default function Hero() {
 
   return (
     <main className="relative z-10 min-h-svh w-screen overflow-hidden">
-      <SplashCursor
-        // containerClassName="absolute inset-0 pointer-events-none"
-        usePrimaryColors={true}
-      />
+      <SplashCursor />
       <div
         className={classNames(
           "relative min-h-svh flex items-center",
