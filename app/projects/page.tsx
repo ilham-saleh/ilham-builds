@@ -12,9 +12,11 @@ export default function Page() {
     <Fragment>
       <Header title="Projects" />
       <div className="space-y-2 md:space-y-5 ">
-        <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-          Here are some of my selected projects worth sharing.
-        </p>
+        <span>
+          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
+            Here are some of my selected projects worth sharing.
+          </p>
+        </span>
       </div>
       <Projects />
     </Fragment>
