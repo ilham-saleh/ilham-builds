@@ -2,10 +2,10 @@ import Projects from "app/projects/projects";
 import { Fragment } from "react";
 import Header from "../components/header";
 
-export const metadata = {
-  title: "Projects",
-  description: "My Projects - Ilham Saleh",
-};
+// export const metadata = {
+//   title: "Projects",
+//   description: "My Projects - Ilham Saleh",
+// };
 
 export default function Page() {
   return (
