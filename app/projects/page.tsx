@@ -9,7 +9,7 @@ import Header from "../components/header";
 
 export default function Page() {
   return (
-    <Fragment>
+    <>
       <Header title="Projects" />
       <div className="space-y-2 md:space-y-5">
         <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
@@ -17,6 +17,6 @@ export default function Page() {
         </p>
       </div>
       <Projects />
-    </Fragment>
+    </>
   );
 }
